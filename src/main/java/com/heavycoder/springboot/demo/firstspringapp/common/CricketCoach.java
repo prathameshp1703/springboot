@@ -1,4 +1,4 @@
-package com.heavycoder.springboot.demo.firstspringapp;
+package com.heavycoder.springboot.demo.firstspringapp.common;
 
 import org.springframework.stereotype.Component;
 

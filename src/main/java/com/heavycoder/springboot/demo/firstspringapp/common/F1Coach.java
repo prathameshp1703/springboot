@@ -1,4 +1,4 @@
-package com.heavycoder.springboot.demo.firstspringapp;
+package com.heavycoder.springboot.demo.firstspringapp.common;
 
 import org.springframework.stereotype.Component;
 
@@ -8,5 +8,4 @@ public class F1Coach implements Coach{
     public String getWorkoutPlan(){
         return "Do squats for 20 minutes!!";
     }
-
 }
