@@ -4,23 +4,24 @@ import com.heavycoder.springboot.demo.firstspringapp.common.Coach;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class FirstRestController {
-    Coach coach1;
-    Coach coach2;
+@RequestMapping("/carsports")
+public class SecondRestController {
 
+    Coach coach;
     @Autowired
-    public FirstRestController(@Qualifier("CricketCoach") Coach cricketCoach)
+    public SecondRestController(@Qualifier("F1Coach") Coach f1Coach)
     {
-        System.out.println("FirstRestController initialized!!!");
-        this.coach1 = cricketCoach;
+        System.out.println("Second rest controller initialized!!");
+        this.coach = f1Coach;
     }
 
-    @GetMapping("/cricket")
-    public String getCricketCoach() {
-        return coach1.getWorkoutPlan();
+    @GetMapping("/f1")
+    public String getCoach()
+    {
+        return coach.getWorkoutPlan();
     }
 }
-
