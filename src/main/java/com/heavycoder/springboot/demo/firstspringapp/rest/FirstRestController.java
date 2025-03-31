@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class FirstRestController {
     Coach coach1;
-    Coach coach2;
-
+    // Since the cricketCoach primary when no coach is specified without the Qualifier
+    // the cricket coach will be used.
     @Autowired
-    public FirstRestController(@Qualifier("CricketCoach") Coach cricketCoach)
+    public FirstRestController(Coach cricketCoach)
     {
         System.out.println("FirstRestController initialized!!!");
         this.coach1 = cricketCoach;

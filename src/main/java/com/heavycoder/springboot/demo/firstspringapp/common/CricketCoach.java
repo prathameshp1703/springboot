@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 
 @Component("CricketCoach")
 @Lazy
+@Primary
 public class CricketCoach implements Coach{
 
     public CricketCoach(){
